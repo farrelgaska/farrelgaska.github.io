@@ -7,6 +7,10 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Backend berjalan di port ${PORT}`);
+});
+
 const DATA_DIR = path.join(__dirname, "data");
 const UPLOAD_DIR = path.join(__dirname, "uploads");
 const DB_FILE = path.join(DATA_DIR, "pengaduan.json");
